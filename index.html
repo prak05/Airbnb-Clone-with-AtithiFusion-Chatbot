@@ -1,85 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airbnb Clone</title>
-    <link rel="stylesheet" href="layout.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AtithiFusion Airbnb Clone</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Noto+Sans+Devanagari&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo">Airbnb Clone</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Listings</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="search">
-            <input type="text" placeholder="Where are you going?" />
-            <button>Search</button>
-        </div>
-    </header>
-    <main>
-        <section class="hero">
-            <h1>Find Your Next Stay</h1>
-            <p>Discover unique places to stay and things to do.</p>
-            <button onclick="alert('Search functionality not implemented yet!')">Search</button>
-        </section>
-        <section class="listings">
-            <h2>Featured Listings</h2>
-            <div class="listing">
-                <img src="https://via.placeholder.com/300" alt="Listing 1">
-                <h3>Cozy Cottage</h3>
-                <p>$120 per night</p>
-            </div>
-            <div class="listing">
-                <img src="https://via.placeholder.com/300" alt="Listing 2">
-                <h3>Modern Apartment</h3>
-                <p>$150 per night</p>
-            </div>
-            <div class="listing">
-                <img src="https://via.placeholder.com/300" alt="Listing 3">
-                <h3>Beach House</h3>
-                <p>$200 per night</p>
-            </div>
-        </section>
-        <section class="experiences">
-            <h2>Unique Experiences</h2>
-            <div class="experience">
-                <h3>Go VIP with Kevin Hart</h3>
-                <p>Hosted by Kevin Hart<br>Coming 21 August</p>
-            </div>
-            <div class="experience">
-                <h3>Join a living room session with Doja</h3>
-                <p>Hosted by Doja Cat<br>Coming October</p>
-            </div>
-            <div class="experience">
-                <h3>Stay in Prince’s Purple Rain house</h3>
-                <p>Hosted by Wendy and Lisa<br>Coming October</p>
-            </div>
-            <!-- Add more experiences as needed -->
-        </section>
-        <section class="chatbot">
-            <h2>Chat with AtithiFusion</h2>
-            <div id="chatbox">
-                <div id="chatlog"></div>
-                <div class="chat-avatar">
-                    <img src="sanskrit-man.png" alt="AtithiFusion Avatar">
-                </div>
-                <input type="text" id="userinput" placeholder="Enter your budget..." />
-                <button onclick="handleChat()">Send</button>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Airbnb Clone. All rights reserved.</p>
-    </footer>
-    <script src="jvascrpt.js"></script>
+  <header>
+    <h1>AtithiFusion Airbnb Clone</h1>
+  </header>
+
+  <main class="container">
+    <!-- Listings Section -->
+    <section class="listings" id="listings">
+      <!-- JS will populate cards here -->
+    </section>
+
+    <!-- Chatbot Section -->
+    <section class="chatbot-container">
+      <img src="images/chatbot-avatar.png" alt="AtithiFusion" class="avatar"/>
+      <div id="chat-window" class="chat-window"></div>
+      <div class="chat-input">
+        <input id="chat-input" type="number" placeholder="Enter your budget (₹)" min="0"/>
+        <button id="send-button">Send</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
-
