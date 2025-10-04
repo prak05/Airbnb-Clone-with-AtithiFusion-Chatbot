@@ -1,6 +1,4 @@
-Here is a dynamic, graphical README markdown file for your Airbnb Clone with AtithiFusion Chatbot project:
 
-```markdown
 <div align="center">
 
 ![Header](https://capsule-render.vercel.app/api?type=waving&color=0:2196F3,100:4CAF50&height=300&section=header&text=AtithiFusion%20Airbnb%20Clone&fontSize=60&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=Responsive%20Web%20App%20with%20AI%20Chatbot%20Integration&descAlignY=55&descSize=20)
@@ -93,7 +91,8 @@ This project is licensed under the MIT License.
 ### 🌟 Star if you find this project useful! ⭐
 
 </div>
-```
+
+
 
 This README contains dynamic badges, an animated typing intro, and clean, intuitive structure, perfect for your Airbnb Clone project.
 
