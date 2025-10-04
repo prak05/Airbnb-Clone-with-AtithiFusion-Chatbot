@@ -3,30 +3,33 @@ const inputField = document.getElementById('chat-input');
 const chatWindow = document.getElementById('chat-window');
 const sendButton = document.getElementById('send-button');
 
-const displayMessage = (msg, cls) => {
-  const div = document.createElement('div');
-  div.className = cls;
-  div.textContent = msg;
-  chatWindow.appendChild(div);
+const displayMessage = (text, sender) => {
+  const msg = document.createElement('div');
+  msg.className = `message ${sender}`;
+  msg.textContent = text;
+  chatWindow.appendChild(msg);
   chatWindow.scrollTop = chatWindow.scrollHeight;
 };
 
-const fetchResponse = async (budget) => {
-  // Placeholder logic; replace with real API call later
-  return `For a budget of ₹${budget}, try “Economy Stay at Downtown Inn.”`;
+const fetchChatbotResponse = async (budget) => {
+  // Replace with real API when available
+  return `Based on your budget of ₹${budget}, try “Cozy Apartment @ $${budget}”`;
 };
 
 const sendMessage = async () => {
   const budget = inputField.value.trim();
   if (!budget) return;
-  displayMessage(budget, 'message user');
+  displayMessage(`₹${budget}`, 'user');
   inputField.value = '';
   try {
-    const reply = await fetchResponse(budget);
-    displayMessage(reply, 'message bot');
+    const response = await fetchChatbotResponse(budget);
+    displayMessage(response, 'bot');
   } catch {
-    displayMessage('Error fetching suggestions.', 'message bot');
+    displayMessage('Sorry, an error occurred.', 'bot');
   }
 };
 
 sendButton.addEventListener('click', sendMessage);
+inputField.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') sendMessage();
+});
